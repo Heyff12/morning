@@ -1,0 +1,55 @@
+@import "./common/const";
+.pageList {
+  width: 100%;
+  h2 {
+    width: 100%;
+    height: 65px;
+    line-height: 65px;
+    padding: 0 0 0 20px;
+    text-align: left;
+    color: white;
+    font-size: 20px;
+    background-color: @orange;
+  }
+  .pagebody {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    ul.papeList {
+      line-height: 35px;
+      li {
+        width: 100%;
+        margin: 10px auto;
+        position: relative;
+        padding-right: 100px;
+        box-sizing: border-box;
+        cursor: pointer;
+        button {
+          position: absolute;
+          right: 0;
+        }
+      }
+    }
+    dl.workList {
+      width: 100%;
+      margin-bottom: 20px;
+      dt {
+        width: 100%;
+        height: 45px;
+        line-height: 45px;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      dd.answer {
+          color:@orange;
+          line-height: 35px;
+      }
+    }
+    p.titleShare{
+      font-size: 16px;
+      color:@orange;
+      line-height: 40px;
+      font-weight: bold;
+    }
+  }
+}
