@@ -86,12 +86,6 @@ export default {
         title: "",
         score: 0,
         subjects: []
-      },
-      config: {
-        url: location.href,
-        sites: ["qzone", "qq", "weibo", "wechat", "douban"], // 启用的站点
-        disabled: ["google", "facebook", "twitter"], // 禁用的站点
-        wechatQrcodeTitle: "微信扫一扫：分享" // 微信二维码提示文字
       }
     };
   },

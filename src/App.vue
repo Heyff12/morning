@@ -35,10 +35,13 @@ export default {
   name: "App",
   data() {
     return {
-      ifSafari: false //苹果浏览器，清楚th.gutter
+      ifSafari: false, //苹果浏览器，清楚th.gutter
+      nowPathSel:""
     };
   },
-  watch: {},
+  watch: {
+    $route: "fetchPath"
+  },
   computed: {
     login: function() {
       return this.$store.state.if_login;
@@ -50,6 +53,17 @@ export default {
       /Safari/g.test(navigator.userAgent)
     ) {
       this.ifSafari = true;
+    }
+  },
+  methods: {
+    //获取当前路由
+    fetchPath() {
+      let path = this.$route.path;
+      if (path.indexOf("partner_excel") == -1) {
+        this.nowPathSel = path;
+      } else {
+        this.nowPathSel = "/partner_index";
+      }
     }
   }
 };
@@ -261,8 +275,6 @@ footer {
   overflow: hidden;
 }
 
-
-
 .border_red {
   color: @red;
 }
@@ -304,24 +316,24 @@ body {
       top: 0;
       left: 0;
       background-color: #545c64;
-      h2.title{
-        width:100%;
+      h2.title {
+        width: 100%;
         height: 65px;
         line-height: 65px;
         text-align: center;
-        color:white;
+        color: white;
         font-size: 20px;
       }
-      .el-menu{
-        border-right:0;
+      .el-menu {
+        border-right: 0;
       }
     }
     .bodybank {
-      width:100%;
-      .right_body{
-        width:100%;
+      width: 100%;
+      .right_body {
+        width: 100%;
       }
-      
+
       &.safariTable {
         .right_body .el-table th.gutter {
           display: none;

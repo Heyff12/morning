@@ -38,7 +38,7 @@
           username: test_any('用户名',1,20,true, 'blur'),
           password: test_any('密码', 6, 20, true, 'blur')
         },
-        login_url: "/api/login" //登录地址
+        login_url: "/api/users/login" //登录地址
       };
     },
     created() {},

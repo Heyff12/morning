@@ -29,7 +29,7 @@ var login_info = {
   msg: "OK",
   data: {}
 };
-Mock.mock(/api\/login/, "post", function () {
+Mock.mock(/api\/users\/login/, "post", function () {
   SetCookie("sessionid", "yaya123344", 12);
   return login_info;
 });
